@@ -58,7 +58,7 @@ public class CouponController {
         
     }
 
-    @PostMapping("apply-coupon/{id}")
+    @PostMapping("/apply-coupon/{id}")
     public ResponseEntity<Cart> applyCoupon(@PathVariable long couponId, @RequestBody Cart cart){
         
         Coupon coupon = couponService.getCouponById(couponId).orElseThrow(() -> new CouponNotFoundException(couponId));
